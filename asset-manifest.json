@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.dbe90d7f.chunk.css",
-    "main.js": "/static/js/main.c227dd38.chunk.js",
-    "main.js.map": "/static/js/main.c227dd38.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ac714a55.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ac714a55.js.map",
-    "static/js/2.d7ea3c32.chunk.js": "/static/js/2.d7ea3c32.chunk.js",
-    "static/js/2.d7ea3c32.chunk.js.map": "/static/js/2.d7ea3c32.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.dbe90d7f.chunk.css.map": "/static/css/main.dbe90d7f.chunk.css.map",
-    "static/js/2.d7ea3c32.chunk.js.LICENSE.txt": "/static/js/2.d7ea3c32.chunk.js.LICENSE.txt"
+    "main.css": "/lastfm/static/css/main.dbe90d7f.chunk.css",
+    "main.js": "/lastfm/static/js/main.c227dd38.chunk.js",
+    "main.js.map": "/lastfm/static/js/main.c227dd38.chunk.js.map",
+    "runtime-main.js": "/lastfm/static/js/runtime-main.1c5dc089.js",
+    "runtime-main.js.map": "/lastfm/static/js/runtime-main.1c5dc089.js.map",
+    "static/js/2.d7ea3c32.chunk.js": "/lastfm/static/js/2.d7ea3c32.chunk.js",
+    "static/js/2.d7ea3c32.chunk.js.map": "/lastfm/static/js/2.d7ea3c32.chunk.js.map",
+    "index.html": "/lastfm/index.html",
+    "static/css/main.dbe90d7f.chunk.css.map": "/lastfm/static/css/main.dbe90d7f.chunk.css.map",
+    "static/js/2.d7ea3c32.chunk.js.LICENSE.txt": "/lastfm/static/js/2.d7ea3c32.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ac714a55.js",
+    "static/js/runtime-main.1c5dc089.js",
     "static/js/2.d7ea3c32.chunk.js",
     "static/css/main.dbe90d7f.chunk.css",
     "static/js/main.c227dd38.chunk.js"
