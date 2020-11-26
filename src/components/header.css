@@ -1,0 +1,15 @@
+.header {
+  background: linear-gradient(-90deg, rgb(63, 62, 62),darkslategray);
+  color: white;
+}
+
+.header-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.header-list-item {
+  padding: 10px;
+}

@@ -1,0 +1,30 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  height: 30px;
+  padding: 5px;
+  line-height: 30px;
+  border-radius: 20px;
+  border: 0 solid white;
+  padding-left: 20px;
+  background: linear-gradient(90deg, white,  rgb(63, 62, 62));
+}
+
+.search-field {
+  border: 0 solid transparent;
+  outline: none;
+  background-color: transparent;
+}
+
+.search-button {
+  border-radius: 20px;
+  border: 0 solid transparent;
+  height: 40px;
+  background-color: dimgray;
+  color: white;
+  padding: 0 20px;
+  outline: none;
+}
+
