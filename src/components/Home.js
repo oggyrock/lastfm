@@ -25,15 +25,19 @@ function Home() {
     <div>
       {currentArtist.name && (
         <div className='artist-info'>
-          <button className='close' onClick={() => setCurrentArtist('')}>+</button>
-          <h2 className="artist">{currentArtist.name}</h2>
-          <img className='image' src={currentArtist.image[5]['#text']} alt=''/>
-          <div className='tags'>
-            {currentArtist.tags.tag.map(tag => (
-              <div key={tag.url}><a href={tag.url}>{tag.name}</a></div>
-            ))}
+          <div className='wrapper'>
+            <h2 className="artist">
+              {currentArtist.name}
+              <button className='close' onClick={() => setCurrentArtist('')}>+</button>
+            </h2>
+            <img className='image' src={currentArtist.image[5]['#text']} alt=''/>
+            <div className='tags'>
+              {currentArtist.tags.tag.map(tag => (
+                <div key={tag.url}><a href={tag.url}>{tag.name}</a></div>
+              ))}
+            </div>
+            <p className='text'>{currentArtist.bio.summary}</p>
           </div>
-          <p className='text'>{currentArtist.bio.summary}</p>
         </div>
       )}
       {list.map(track => (
