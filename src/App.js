@@ -9,9 +9,9 @@ function App() {
   return (
       <HashRouter>
         <div className="App">
-            <Header />
+          <Header />
           <div className='wrapper'>
-            <Route path='/home' component={Home} />
+            <Route path='/' component={Home} exact />
             <Route path='/search' component={Search} />
           </div>
         </div>

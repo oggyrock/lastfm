@@ -1,35 +1,31 @@
 import { useState } from 'react';
+import { connect, useDispatch } from 'react-redux';
 import './search.css';
+import { setQuery, loadSearchList } from '../store/store';
 
-function Search() {
-  const [query, setQuery] = useState('');
-  const [searchList, setSearchList] = useState([]);
 
-  const getSearchList = (query) => {
-    if(query === '') return;
-    fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=4c253050b1788950960d40711fb0e7e8&format=json&limit=10`)
-      .then(result => result.json())
-      .then(data => setSearchList(data.results.trackmatches.track))
-  }
-  console.log(searchList);
+function Search(props) {
+  const dispatch = useDispatch();
 
   return (
     <>
       <form className='search' onSubmit={event => {
         event.preventDefault();
-        getSearchList(query);
+        props.loadSearchList(props.query);
+        dispatch(setQuery(''));
       }}>
         <input
           className='search-field'
           type="text"
           placeholder='search track'
-          value={query}
-          onChange={({ target }) => setQuery(target.value)}
+          value={props.query}
+          onChange={({ target }) => {
+            props.setQuery(target.value)}}
         />
         <button className='search-button'>Search</button>
       </form>
-      {searchList.map(item => (
-        <div className='track' key={item.name}>
+      {props.searchList.map(item => (
+        <div className='track' key={Math.random()}>
           <a href={item.artist.url}><img className='song-pic' src={item.image[0]['#text']} alt='' /></a>
           <span>{item.name}</span>
           <span className='divider'>-</span>
@@ -38,6 +34,19 @@ function Search() {
       ))}
     </>
   )
-}
+};
 
-export default Search;
+const mapStateToProps = state => ({
+  query: state.query,
+  searchList: state.searchList,
+});
+
+const mapDispatchToProps = dispatch => ({
+  setQuery: query => dispatch(setQuery(query)),
+  loadSearchList: query => dispatch(loadSearchList(query))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Search);
