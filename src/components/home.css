@@ -21,6 +21,10 @@
   padding: 0 10px;
 }
 
+.artist-name {
+  cursor: pointer;
+}
+
 .artist-info {
   position: absolute;
   display: flex;
@@ -31,7 +35,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background:linear-gradient(90deg, darkslategray, rgb(63, 62, 62))
+  background:linear-gradient(90deg, darkslategray, rgb(63, 62, 62));
 }
 
 .close {
@@ -44,6 +48,7 @@
   border: 0px solid transparent;
   outline: none;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .artist {

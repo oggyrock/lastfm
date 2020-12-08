@@ -34,7 +34,7 @@ function Home(props) {
           <a href={track.artist.url}><img className='song-pic' src={track.image[0]['#text']} alt=''/></a>
           <span>{track.name}</span>
           <span className='divider'>-</span>
-          <span onClick={() => props.loadArtist(track.artist.name)}><strong>{track.artist.name}</strong></span>
+          <span className='artist-name' onClick={() => props.loadArtist(track.artist.name)}><strong>{track.artist.name}</strong></span>
         </div>
       ))}
     </div>

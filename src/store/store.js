@@ -59,21 +59,22 @@ export const setSearchList = searchList => ({
   payload: searchList,
 });
 
-export const loadList = () => async (dispatch, getState) => {
+export const loadList = () => async (dispatch) => {
   const list = await fetch('http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=4c253050b1788950960d40711fb0e7e8&format=json&limit=10')
     .then(result => result.json())
     .then(data => data.tracks.track);
   dispatch(setList(list));
 }
 
-export const loadArtist = (artist) => async (dispatch, getState) => {
+export const loadArtist = (artist) => async (dispatch) => {
   const artist2 = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artist}&api_key=4c253050b1788950960d40711fb0e7e8&format=json`)
     .then(result => result.json())
     .then(data => data.artist);
   dispatch(pickArtist(artist2));
 }
 
-export const loadSearchList = (query) => async (dispatch, getState) => {
+export const loadSearchList = (query) => async (dispatch) => {
+  if(query === '') return;
   const searchList = await fetch(`http://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=4c253050b1788950960d40711fb0e7e8&format=json&limit=10`)
     .then(result => result.json())
     .then(data => data.results.trackmatches.track);

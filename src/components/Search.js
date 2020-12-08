@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import './search.css';
 import { setQuery, loadSearchList } from '../store/store';

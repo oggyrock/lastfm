@@ -2,6 +2,7 @@
   text-align: center;
   background-color:rgb(63, 62, 62);
   min-height: 100vh;
+  min-width: 325px;
 }
 
 .wrapper {
